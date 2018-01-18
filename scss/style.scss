@@ -163,23 +163,25 @@
 			vertical-align: middle;
 			transform: rotate(180deg);
 			margin-left: 9px;
-			@include trs(.1);
+			@include trs(.3);
 		}
 	}
 	&__list {
-		display: none;
+		overflow: hidden;
+		height: 0;
 		position: absolute;
 		left: -3px;
 		top: 13px;
 		list-style: none;
 		padding: 0;
-		border: 1px solid transparentize(#fff, .5);
+		transform: translate(0, -15%);
+		@include trs(.3);
 		&_item {
 			a {
 				color: transparentize(#fff, .5);
 				display: block;
 				text-decoration: none;
-				padding: 4px 17px;
+				padding: 0px 17px;
 				@include trs(.3);
 				&:hover {
 					color: #fff;
@@ -196,7 +198,15 @@
 				}
 			}
 			&__list {
+				border: 1px solid transparentize(#fff, .5);
+				height: auto;
 				display: block;
+				transform: translate(0, -0%);
+				&_item {
+					a {
+						padding: 4px 17px;
+					}
+				}
 			}
 		}
 	}

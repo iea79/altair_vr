@@ -146,11 +146,11 @@ input[type=checkbox]:disabled:indeterminate:before {
 	@include trs(0.3);
 	&:hover {
 		// background-color: lighten($btn_default_bg_color, 20%);
-		box-shadow: 0 0 21px rgba(229, 85, 194, 0.22);
+		box-shadow: 0 0 21px rgba(229, 85, 194, 0.52);
 		background-image: linear-gradient(to left, #8844bf 0%, #f85dd2 100%);
 	}
 	&:active {
-		box-shadow: 0 0 21px rgba(229, 85, 194, 0.22);
+		box-shadow: 0 0 21px rgba(229, 85, 194, 0.32);
 		background-image: linear-gradient(to left, #8844bf 0%, #f85dd2 100%);
 	}
 	@each $status_el, $color_bg in $el_colors {
