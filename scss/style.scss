@@ -277,7 +277,7 @@
 	margin-top: -1px;
 	@extend %clear_a;
 	&_left {
-		float: left;
+		display: inline-block;
 		color: #ffffff;
 		width: 41%;
 	}
@@ -331,17 +331,11 @@
 	&_right {
 		padding-left: 29px;
 		overflow: hidden;
-		&:before {
-			content: '';
-			height: 448px;
-			display: inline-block;
-			vertical-align: baseline;
-			width: 1px;
-		}
+		display: inline-block;
+		width: 58%;
+		vertical-align: bottom;
 		img {
 			display: inline-block;
-			max-width: 99%;
-			vertical-align: baseline;
 		}
 	}
 	.btn {
