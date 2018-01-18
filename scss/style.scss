@@ -144,6 +144,9 @@
 		float: left;
 		width: 91px;
 		margin-right: 9%;
+		img {
+			display: block;
+		}
 	}
 }
 
@@ -321,13 +324,13 @@
 	}
 	&_right {
 		padding-left: 29px;
-		overflow: hidden;
 		display: inline-block;
 		width: 58%;
 		position: relative;
 		vertical-align: bottom;
 		img {
 			display: inline-block;
+			margin-bottom: -19px;
 		}
 	}
 	&_title {
@@ -345,7 +348,7 @@
 		min-width: 150px;
 	}
 	&_action {
-		margin-bottom: 105px;
+		margin-bottom: 83px;
 	}
 	&_play {
 		display: inline-block;
@@ -425,9 +428,32 @@
 
 .main__content {}
 .vr {
-	background: url('../img/vr_bg.png') no-repeat top 50px center;
+	// background: url('../img/vr_bg.png') no-repeat top 104px right;
 	padding-top: 126px;
 	padding-bottom: 140px;
+	position: relative;
+	&:before {
+		content: 'VR';
+		position: absolute;
+		font-size: 300px;
+		left: -4px;
+		top: -3px;
+		font-weight: 800;
+		display: block;
+		color: #f7f7f7;
+	}
+	&:after {
+		content: url('../img/vr_bg.png');
+		position: absolute;
+		top: 145px;
+		right: 2%;
+		transform: rotate(24deg);
+		opacity: 0.4;
+		
+	}
+	.container_center {
+		position: relative;
+	}
 }
 .content__title {
 	color: $color_primary;
