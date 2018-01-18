@@ -1,0 +1,487 @@
+/*
+//  ==========================
+//  Evgeniy Ivanov
+//  Email: busforward@gmail.com
+//  Skype: ivanov_ea
+//  ==========================
+ */
+
+@import 'mixins/mixin';
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+// @include font-face("Century Gothic", fonts/CenturyGothic, normal, normal);
+// @include font-face("Century Gothic Bold", fonts/CenturyGothic, bold, normal);
+// @include font-face("ArialMT", fonts/CenturyGothic, normal, normal);
+
+
+ // Import files
+@import 'variables/variables';
+@import 'core/reset';
+@import 'core/form';
+@import 'core/grid';
+
+
+// Main wrappers =====================================
+
+.wrapper {
+	font-size: $main_font_size;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto (-$footer_height) auto; // отрицательный нижний отступ на высоту футера
+}
+
+.container_center {
+	max-width: $container_width;
+	padding: 0 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.column {
+	@include columns(4, 20px, 300px);
+}
+
+// Social link
+.soc {
+	float: left;
+	a {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background-color: #000;
+		text-align: center;
+		text-decoration: none;
+		@include trs(0.3s);
+		&:hover {
+			opacity: .8;
+		}
+		&:before {
+			content: 'soc';
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+}
+
+.copy {
+	float: right;
+}
+
+// Breadcrumb ==================================================================
+.breadcrumb {
+	margin: 15px 0;
+	padding: 0;
+	li {
+		display: inline-block;
+		vertical-align: baseline;
+		&:not(:first-child) {
+			&:before {
+				content: '/';
+				display: inline-block;
+			}
+		}
+		&:last-child {
+			a {
+				cursor: default;
+				text-decoration: none;
+			}
+		}
+		
+		a {
+			font-size: 12px;
+		}
+	}
+}
+
+// Pagination ==================================================================
+.pagination {
+	margin: 25px 0;
+	padding: 0;
+	li {
+		display: inline-block;
+		a {
+			display: block;
+			text-align: center;
+		}
+		&.prev, &.next {
+			a {
+				&:before {					
+				}
+			}
+		}
+		&.prev {
+			a {
+				&:before {
+					content: '<';
+					
+				}
+			}
+		}
+		&.next {
+			a {
+				&:before {
+					content: '>';
+					
+				}
+			}
+		}
+	}
+}
+
+/* Header
+ ----------------------------------------------------------------------------- */
+.header {
+	padding: 28px 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	@extend %clear_a;
+	&__logo {
+		float: left;
+		width: 91px;
+		margin-right: 9%;
+	}
+}
+
+.language {
+	color: #fff;
+	float: right;
+	margin-top: 23px;
+	font-size: 12px;
+	margin-right: 9.2%;
+	position: relative;
+	padding: 5px;
+	&__current {
+		display: block;
+		&:after {
+			content: url(../img/angel.svg);
+			display: inline-block;
+			vertical-align: middle;
+			transform: rotate(180deg);
+			margin-left: 9px;
+			@include trs(.1);
+		}
+	}
+	&__list {
+		display: none;
+		position: absolute;
+		left: -3px;
+		top: 13px;
+		list-style: none;
+		padding: 0;
+		border: 1px solid transparentize(#fff, .5);
+		&_item {
+			a {
+				color: transparentize(#fff, .5);
+				display: block;
+				text-decoration: none;
+				padding: 4px 17px;
+				@include trs(.3);
+				&:hover {
+					color: #fff;
+					background-color: transparentize(#fff, .9);
+				}
+			}
+		}
+	}
+	&:hover {
+		.language {
+			&__current {
+				&:after {
+					transform: rotate(0deg);
+				}
+			}
+			&__list {
+				display: block;
+			}
+		}
+	}
+}
+
+.menu {
+	padding-top: 25px;
+	&__toggle {
+		padding-top: 5px;
+		color: #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 13px;
+		&:hover {
+			.menu__bar {
+				&:before {
+					right: 3px;
+					width: 20px;
+				}
+			}
+		}
+	}
+	&__bar {
+		width: 23px;
+		height: 15px;
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 35px;
+		border-top: 1px solid;
+		border-bottom: 1px solid;
+		@include trs(.3);
+		&:before {
+			@include trs(.3);
+			content: '';
+			position: absolute;
+			border-top: 1px solid;
+			width: 22px;
+			top: 49%;
+			right: -15px;
+		}
+	}
+}
+
+
+// stiky menu
+.stiky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+/* Navbar
+-------------------------------------------------------------------------------*/
+.navbar {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	text-align: right;
+	&__item {
+		display: inline-block;
+	}
+	&__link {}
+}
+
+/* Middle
+ ----------------------------------------------------------------------------- */
+.main__content {
+	padding-bottom: $footer_height;
+	@extend %clear_a;
+}
+
+.first__screen {
+	background: url('../img/first_bg.jpg') center no-repeat;
+	background-size: cover;
+	padding-top: 237px;
+	padding-bottom: 165px;
+	margin-top: -1px;
+	@extend %clear_a;
+	&_left {
+		float: left;
+		color: #ffffff;
+		width: 41%;
+	}
+	&_title {
+		font-weight: 800;
+		font-size: 36px;
+		line-height: 1.7;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		margin-bottom: 31px;
+	}
+	&_sub {
+		font-size: 18px;
+		line-height: 1.7;
+		margin-bottom: 45px;
+		min-width: 150px;
+	}
+	&_action {
+		margin-bottom: 105px;
+	}
+	&_play {
+		display: inline-block;
+		font-size: 13px;
+		color: #fff;
+		cursor: pointer;
+		&:before {
+			content: '';
+		    width: 68px;
+		    height: 68px;
+		    background: url('../img/css_sprites.png') -140px -10px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 30px;
+		}
+		&:hover {
+			color: #db53bf;
+			&:before {
+			    // width: 110px; height: 110px;
+			    // background: url('../img/css_sprites.png') -10px -10px;
+			}
+		}
+	}
+	&_soc {
+		a {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 31px;
+		}
+	}
+	&_right {
+		padding-left: 29px;
+		overflow: hidden;
+		&:before {
+			content: '';
+			height: 448px;
+			display: inline-block;
+			vertical-align: baseline;
+			width: 1px;
+		}
+		img {
+			display: inline-block;
+			max-width: 99%;
+			vertical-align: baseline;
+		}
+	}
+	.btn {
+		width: 37%;
+		margin-right: 11%;
+	}
+}
+
+.ico-twitter {
+    width: 17px; height: 14px;
+    background: url('../img/css_sprites.png') -76px -140px;
+	&:hover {
+	    width: 17px; height: 14px;
+	    background: url('../img/css_sprites.png') -187px -140px;
+	}
+
+}
+
+.ico-youtube {
+    width: 19px; height: 14px;
+    background: url('../img/css_sprites.png') -179px -98px;
+	&:hover {
+	    width: 19px; height: 14px;
+	    background: url('../img/css_sprites.png') -140px -98px;
+	}
+}
+
+.ico-telegram {
+    width: 17px; height: 14px;
+    background: url('../img/css_sprites.png') -113px -140px;
+	&:hover {
+	    width: 17px; height: 14px;
+	    background: url('../img/css_sprites.png') -150px -140px;
+	}
+}
+
+.ico-play {
+    width: 68px; height: 68px;
+    background: url('../img/css_sprites.png') -140px -10px;
+	&:hover {
+	    width: 110px; height: 110px;
+	    background: url('../img/css_sprites.png') -10px -10px;
+	}
+}
+.ico-fb {
+    width: 10px; height: 18px;
+    background: url('../img/css_sprites.png') -40px -179px;
+	&:hover {
+	    width: 10px; height: 18px;
+	    background: url('../img/css_sprites.png') -10px -179px;
+	}
+}
+
+.ico-bitcoin {
+    width: 13px; height: 19px;
+    background: url('../img/css_sprites.png') -10px -140px;
+	&:hover {
+	    width: 13px; height: 19px;
+	    background: url('../img/css_sprites.png') -43px -140px;
+	}
+}
+
+.main__content {}
+.vr {
+	background: url('../img/vr_bg.png') no-repeat top 50px center;
+	padding-top: 126px;
+	padding-bottom: 140px;
+}
+.content__title {
+	color: $color_primary;
+	font-size: 36px;
+	line-height: 1.7;
+	margin-bottom: 86px;
+}
+
+.grid__semiline {
+	// margin-left: 0;
+	.grid__wrapper {
+		margin-bottom: 0;
+		padding: 18px 60px 66px 60px;
+		background-color: #fff;
+		line-height: 1.4;
+		&:first-child,&:nth-child(4n+4) {
+			padding-left: 22px;
+		}
+		&:nth-child(n+4) {
+			border-top: 1px solid #ebebeb;
+			padding-top: 49px;
+			padding-bottom: 22px;
+		}
+
+		&:nth-child(3n+2) {
+			border-left: 1px solid #ebebeb;
+		}
+
+		&:nth-child(3n+3) {
+			border-left: 1px solid #ebebeb;
+		}
+	}
+	&_img {
+		margin-bottom: 30px;
+		min-height: 50px;
+		img {
+
+		}
+	}
+}
+
+
+/* Footer
+ ----------------------------------------------------------------------------- */
+.footer {
+	position: relative;
+	min-height: $footer_height;
+	background: #BFF08E;
+	@extend %clear_all;
+	.container_center {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+/* Responsive styles
+----------------------------------------------------------------------------- */
+// max-width: 1200px ===========================================================
+@media (max-width: $breakpoint-xlarge) {
+}
+
+// max-width: 960px ===========================================================
+@media (max-width: $breakpoint-large) {
+	
+}
+
+// max-width: 760px ===========================================================
+@media (max-width: $breakpoint-medium) {
+	
+}
+
+// max-width: 480px ===========================================================
+@media (max-width: $breakpoint-small) {
+	
+}
+
+
