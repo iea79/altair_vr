@@ -72,7 +72,32 @@ $(document).ready(function() {
    	// setGridMatch($('[data-grid-match] .grid__item'));
    	gridMatch();
 
-   	
+    $('.polifill').constellation({
+        star: {
+            width: 3,
+            color: 'rgba(31, 75, 93, 0.3)'
+        },
+        line: {
+        	width: 2,
+            color: 'rgba(31, 75, 93, 0.1)'
+        },
+        // radius: 300,
+    	length: (window.innerWidth / 10),
+		radius: (window.innerWidth / 5)
+    });
+
+    $('.polifill_min').constellation({
+        star: {
+            width: 0,
+            color: 'rgba(31, 75, 93, 0.1)'
+        },
+        line: {
+            color: 'rgba(31, 75, 93, 0.1)'
+        },
+    	length: (window.innerWidth / 8),
+		radius: (window.innerWidth / 6)
+    });
+
 
 });
 

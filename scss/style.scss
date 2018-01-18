@@ -138,6 +138,7 @@
 	left: 0;
 	top: 0;
 	width: 100%;
+	z-index: 5;
 	@extend %clear_a;
 	&__logo {
 		float: left;
@@ -240,6 +241,14 @@
 	}
 }
 
+.polifill, .polifill_min {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
 
 // stiky menu
 .stiky {
@@ -270,16 +279,44 @@
 }
 
 .first__screen {
-	background: url('../img/first_bg.jpg') center no-repeat;
-	background-size: cover;
+	// background: url('../img/first_bg.jpg') center no-repeat;
+	// background-size: cover;
+	.container_center {
+		position: relative;
+		z-index: 5;
+	}
+	background-color: #010e15;
 	padding-top: 237px;
 	padding-bottom: 165px;
 	margin-top: -1px;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: radial-gradient(top, ellipse cover, #0693dc 0%, #001520 64%);
+		opacity: .3;
+		z-index: 0;
+	}
 	@extend %clear_a;
 	&_left {
 		display: inline-block;
 		color: #ffffff;
 		width: 41%;
+	}
+	&_right {
+		padding-left: 29px;
+		overflow: hidden;
+		display: inline-block;
+		width: 58%;
+		position: relative;
+		vertical-align: bottom;
+		img {
+			display: inline-block;
+		}
 	}
 	&_title {
 		font-weight: 800;
@@ -308,16 +345,15 @@
 			content: '';
 		    width: 110px;
 		    height: 110px;
-		    background: url('../img/play.svg') center no-repeat;
+		    background: url('../img/play.png') -10px -10px;
 			display: inline-block;
 			vertical-align: middle;
 			margin-right: 7px;
-			transition: background .3s;
 		}
 		&:hover {
 			color: #db53bf;
 			&:before {
-			    background-image: url('../img/play_hover.svg');
+			    background: url('../img/play.png') -140px -10px;
 			}
 		}
 	}
@@ -326,16 +362,6 @@
 			display: inline-block;
 			vertical-align: middle;
 			margin-right: 31px;
-		}
-	}
-	&_right {
-		padding-left: 29px;
-		overflow: hidden;
-		display: inline-block;
-		width: 58%;
-		vertical-align: bottom;
-		img {
-			display: inline-block;
 		}
 	}
 	.btn {
@@ -348,7 +374,6 @@
     width: 17px; height: 14px;
     background: url('../img/css_sprites.png') -76px -140px;
 	&:hover {
-	    width: 17px; height: 14px;
 	    background: url('../img/css_sprites.png') -187px -140px;
 	}
 
@@ -358,7 +383,6 @@
     width: 19px; height: 14px;
     background: url('../img/css_sprites.png') -179px -98px;
 	&:hover {
-	    width: 19px; height: 14px;
 	    background: url('../img/css_sprites.png') -140px -98px;
 	}
 }
@@ -367,33 +391,22 @@
     width: 17px; height: 14px;
     background: url('../img/css_sprites.png') -113px -140px;
 	&:hover {
-	    width: 17px; height: 14px;
 	    background: url('../img/css_sprites.png') -150px -140px;
 	}
 }
 
-.ico-play {
-    width: 68px; height: 68px;
-    background: url('../img/css_sprites.png') -140px -10px;
-	&:hover {
-	    width: 110px; height: 110px;
-	    background: url('../img/css_sprites.png') -10px -10px;
-	}
-}
 .ico-fb {
     width: 10px; height: 18px;
     background: url('../img/css_sprites.png') -40px -179px;
 	&:hover {
-	    width: 10px; height: 18px;
 	    background: url('../img/css_sprites.png') -10px -179px;
 	}
 }
 
 .ico-bitcoin {
-    width: 13px; height: 19px;
+    width: 15px; height: 19px;
     background: url('../img/css_sprites.png') -10px -140px;
 	&:hover {
-	    width: 13px; height: 19px;
 	    background: url('../img/css_sprites.png') -43px -140px;
 	}
 }
