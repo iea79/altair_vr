@@ -292,7 +292,7 @@
 	&_sub {
 		font-size: 18px;
 		line-height: 1.7;
-		margin-bottom: 45px;
+		margin-bottom: 26px;
 		min-width: 150px;
 	}
 	&_action {
@@ -303,20 +303,21 @@
 		font-size: 13px;
 		color: #fff;
 		cursor: pointer;
+		@include trs(.3);
 		&:before {
 			content: '';
-		    width: 68px;
-		    height: 68px;
-		    background: url('../img/css_sprites.png') -140px -10px;
+		    width: 110px;
+		    height: 110px;
+		    background: url('../img/play.svg') center no-repeat;
 			display: inline-block;
 			vertical-align: middle;
-			margin-right: 30px;
+			margin-right: 7px;
+			transition: background .3s;
 		}
 		&:hover {
 			color: #db53bf;
 			&:before {
-			    // width: 110px; height: 110px;
-			    // background: url('../img/css_sprites.png') -10px -10px;
+			    background-image: url('../img/play_hover.svg');
 			}
 		}
 	}
@@ -345,7 +346,7 @@
 	}
 	.btn {
 		width: 37%;
-		margin-right: 11%;
+		margin-right: 7%;
 	}
 }
 
