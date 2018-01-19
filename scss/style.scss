@@ -163,7 +163,7 @@
 			text-align: center;
 			img {
 				display: inline-block;
-				width: 64px;
+				width: 45px;
 			}
 		}
 	}
@@ -238,7 +238,7 @@
 		margin-top: 0;
 		position: absolute;
 		right: 15px;
-		top: 8px;
+		top: 3px;
 	}
 }
 
@@ -282,7 +282,7 @@
 	}
 	@media (max-width: 767px) {
 		padding-top: 0;
-		top: 9px;
+		top: 1px;
 		position: absolute;
 		&__toggle {
 			font-size: 0;
@@ -461,7 +461,6 @@
 		}
 	}
 	@media (max-width: 767px) {
-		padding-top: 157px;
 		&_title {
 			font-size: 28px;
 		}
