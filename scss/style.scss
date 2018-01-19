@@ -8,7 +8,7 @@
 
 @import 'mixins/mixin';
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800&subset=cyrillic,cyrillic-ext,latin-ext');
 // @include font-face("Century Gothic", fonts/CenturyGothic, normal, normal);
 // @include font-face("Century Gothic Bold", fonts/CenturyGothic, bold, normal);
 // @include font-face("ArialMT", fonts/CenturyGothic, normal, normal);
