@@ -48,6 +48,10 @@ $(document).ready(function() {
 		event.preventDefault();
 	});
 
+    $('.language__current').on('click', function() {
+        $(this).parent().toggleClass('open');
+    });
+
 	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
 	// $('#main__menu a[href^="#"]').click( function(){ 
 	// 	var scroll_el = $(this).attr('href'); 
