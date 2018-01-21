@@ -162,5 +162,19 @@ input[type=checkbox]:disabled:indeterminate:before {
 				background-color: lighten($color_bg, 20%);
 			}
 		}
-	}	
+	}
+	&__contrast {
+		background-color: #fff;
+		border: 1px solid #fff;
+		color: #9346aa;
+		background-image: none;
+		&:hover {
+			background-image: none;
+			background-color: transparent;
+			color: #fff;
+		}
+		&:active {
+			background-image: none;
+		}
+	}
 }

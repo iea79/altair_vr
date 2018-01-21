@@ -1,0 +1,42 @@
+.header {
+	padding: 28px 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+	@extend %clear_a;
+	&__logo {
+		float: left;
+		width: 91px;
+		margin-right: 9%;
+		display: block;
+		img {
+			height: auto;
+			width: 100%;
+		}
+	}
+	@media (max-width: 767px) {
+		padding: 15px 0;
+		&__logo {
+			// margin-top: 9px;
+			width: 100%;
+			margin-right: 30px;
+			float: none;
+			text-align: center;
+			img {
+				display: inline-block;
+				width: 45px;
+			}
+		}
+	}
+}
+
+// stiky menu
+.stiky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
