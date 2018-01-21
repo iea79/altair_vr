@@ -125,11 +125,11 @@
 // 
 @mixin flex() {
 	@include browser("flexible") {	
-		display: -webkit-box;
-		display: -moz-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: -ms-flex;
+		// display: -webkit-box;
+		// display: -moz-box;
+		// display: -webkit-flex;
+		// display: -ms-flexbox;
+		// display: -ms-flex;
 		display: flex;
 		&>div {
 			display: block;

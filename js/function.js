@@ -109,22 +109,26 @@ $(document).ready(function() {
         prevArrow: $('.exp__slider_prev'),
         nextArrow: $('.exp__slider_next'),
         adaptiveHeight: true,
-        // dotsClass: $('.exp__slider_dots'),
     });
 
-    // slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    //     console.log(nextSlide);
-    //     if (nextSlide == 6) {
-    //         $('.exp__slider_next').trigger('click').css('borderColor', 'red');
-    //         slider.slick('slickGoTo', 7);
-    //         $(currentSlide).css('borderColor', 'red');
-    //     }
-    // });
+    if (!isXsWidth()) {
 
-    // $('#slick-slide06').on('click', function() {
-    //     console.log(slider.slick('slickCurrentSlide'))
-    //     slider.slick('slickGoTo', 7);
-    // });
+        $('.slide__left').addClass("hidden").viewportChecker({
+            classToAdd: 'visible animated slideInLeft',
+            offset: 100
+        });
+
+        $('.slide__right').addClass("hidden").viewportChecker({
+            classToAdd: 'visible animated slideInRight',
+            offset: 100
+        });
+
+        $('.slide__top').addClass("hidden").viewportChecker({
+            classToAdd: 'visible animated slideInUp',
+            offset: 100
+        });
+    }
+
 
 });
 
@@ -141,4 +145,5 @@ function gridMatch() {
    		byRow: true,
    	});
 }
+
 

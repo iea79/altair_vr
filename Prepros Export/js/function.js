@@ -102,6 +102,33 @@ $(document).ready(function() {
 		radius: (window.innerWidth / 6)
     });
 
+    var slider = $('.exp__slider');
+
+    slider.slick({
+        dots: true,
+        prevArrow: $('.exp__slider_prev'),
+        nextArrow: $('.exp__slider_next'),
+        adaptiveHeight: true,
+    });
+
+    if (!isXsWidth()) {
+
+        $('.slide__left').addClass("hidden").viewportChecker({
+            classToAdd: 'visible animated slideInLeft',
+            offset: 100
+        });
+
+        $('.slide__right').addClass("hidden").viewportChecker({
+            classToAdd: 'visible animated slideInRight',
+            offset: 100
+        });
+
+        $('.slide__top').addClass("hidden").viewportChecker({
+            classToAdd: 'visible animated slideInUp',
+            offset: 100
+        });
+    }
+
 
 });
 
@@ -118,4 +145,5 @@ function gridMatch() {
    		byRow: true,
    	});
 }
+
 

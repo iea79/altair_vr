@@ -163,6 +163,23 @@ input[type=checkbox]:disabled:indeterminate:before {
 			}
 		}
 	}
+	&__primary {
+		background-color: transparent;
+		border: 1px solid #fff;
+		color: #fff;
+		background-image: none;
+		&:hover {
+			background-image: none;
+			background-color: #fff;
+			color: #9346aa;
+		}
+		&:active {
+			background-image: none;
+			background-color: transparentize(#fff, .2);
+			border: 1px solid transparentize(#fff, .2);
+			color: #9346aa;
+		}
+	}
 	&__contrast {
 		background-color: #fff;
 		border: 1px solid #fff;
@@ -175,6 +192,7 @@ input[type=checkbox]:disabled:indeterminate:before {
 		}
 		&:active {
 			background-image: none;
+			background-color: transparentize(#fff, .8);
 		}
 	}
 }
