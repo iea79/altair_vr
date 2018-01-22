@@ -109,24 +109,46 @@ $(document).ready(function() {
         prevArrow: $('.exp__slider_prev'),
         nextArrow: $('.exp__slider_next'),
         adaptiveHeight: true,
+        initialSlide: 18,
+        autoplay: true,
+        autoplaySpeed: 4000
     });
 
     if (!isXsWidth()) {
 
-        $('.slide__left').addClass("hidden").viewportChecker({
-            classToAdd: 'visible animated slideInLeft',
-            offset: 100
-        });
+        // $('.slide__left').addClass("hidden").viewportChecker({
+        //     classToAdd: 'visible animated slideInLeft',
+        //     offset: 100
+        // });
 
-        $('.slide__right').addClass("hidden").viewportChecker({
-            classToAdd: 'visible animated slideInRight',
-            offset: 100
-        });
+        // $('.slide__right').addClass("hidden").viewportChecker({
+        //     classToAdd: 'visible animated slideInRight',
+        //     offset: 100
+        // });
 
-        $('.slide__top').addClass("hidden").viewportChecker({
-            classToAdd: 'visible animated slideInUp',
-            offset: 100
-        });
+        // $('.slide__top').addClass("hidden").viewportChecker({
+        //     classToAdd: 'visible animated fadeInUp',
+        //     offset: 100
+        // });
+        // var target = $('.slide__top');
+        // target.each(function(index) {        
+        //     var targetPos = target.offset().top;
+        //     var winHeight = $(window).height();
+        //     var scrollToElem = targetPos - winHeight;
+        //     target.addClass('hidden').attr('data-anim', index);;
+        // });
+        // $(window).scroll(function(){
+        // var winScrollTop = $(this).scrollTop();
+        //     if(winScrollTop > scrollToElem){
+        //         target.addClass('visible animated fadeInUp');
+        //         //сработает когда пользователь доскроллит к элементу с классом .elem
+        //     }
+        // });
+
+        animStart('.slide__left', 'slideInLeft');
+        animStart('.slide__right', 'slideInRight');
+        animStart('.slide__top', 'fadeInUp');
+
     }
 
 
@@ -146,4 +168,18 @@ function gridMatch() {
    	});
 }
 
+function animStart(el, anim) {
+    var windowHeight = $(window).height();
 
+    $(el).addClass('hidden');
+ 
+    $(document).on('scroll', function() {
+        $(el).each(function() {
+            var self = $(this),
+            height = self.offset().top + self.height();
+            if ($(document).scrollTop() + windowHeight >= height) {
+                self.addClass('visible animated '+anim)
+            }
+        });
+    });
+}

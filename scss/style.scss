@@ -95,7 +95,7 @@
 		@extend %clear_a;
 		margin-bottom: 38px;
 		position: relative;
-		@include browser("flexible") {
+		// @include browser("flexible") {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
@@ -103,7 +103,7 @@
 				display: block;
 				width: 50%;
 			}
-		}
+		// }
 		@include browser("not-flex") {
 			font-size: 0;
 			line-height: 0;
@@ -111,7 +111,7 @@
 			>div {
 				display: inline-block;
 				vertical-align: middle;
-				width: 50%;
+				// width: 50%;
 				letter-spacing: normal;
 				line-height: $main_line_height;
 				font-size: $main_font_size;
@@ -152,10 +152,12 @@
 			padding-top: 14px;
 			padding-bottom: 14px;
 			margin-right: 43px;
-			background-image: linear-gradient(to top, #653e9b 0%, #e555c2 100%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			color: $main_color;
+			color: #e555c2;
+			@supports (-webkit-text-fill-color: transparent) {
+				background-image: linear-gradient(to top, #653e9b 0%, #e555c2 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
 			&:nth-child(n+2) {
 				border-left: 1px solid #e6e6e6;
 				padding-left: 40px;
@@ -187,6 +189,13 @@
 		padding-left: 72px;
 		img {
 			height: auto;
+		}
+	}
+	@media (max-width: 1400px) {
+		&__row {
+			&:before {
+				margin-left: -17px;
+			}
 		}
 	}
 	@media (max-width: 991px) {
@@ -224,14 +233,14 @@
 	@media (max-width: 767px) {
 		&__row {
 			margin-bottom: 73px;
-			@include browser('flexible') {
+			// @include browser('flexible') {
 				flex-flow: column wrap;
 				>div {
 					display: block;
 					width: 100%;
 					text-align: center;
 				}
-			}
+			// }
 			@include browser('not-flex') {
 				>div {
 					display: block;
@@ -244,14 +253,14 @@
 			}
 			&_right {
 				position: relative;
-				@include browser('flexible') {
+				// @include browser('flexible') {
 					.altair__content {
 						order: 0;
 					}
 					.altair__img {
 						order: 1;
 					}
-				}
+				// }
 				@include browser('not-flex') {
 					.altair__content {
 						padding-left: 0;
@@ -337,7 +346,7 @@
 		&_prev,&_next {
 			position: absolute;
 			top: 5px;
-			right: 15px;
+			right: 16px;
 			border: 1px solid #cccccc;
 			width: 50px;
 			height: 50px;
@@ -478,20 +487,32 @@
 						&:after {
 							content: '05';
 						}
+						button {
+							opacity: .95;
+						}
 					}
 					&:nth-child(12) {
 						&:after {
 							content: '06';
+						}
+						button {
+							opacity: .9;
 						}
 					}
 					&:nth-child(13) {
 						&:after {
 							content: '07';
 						}
+						button {
+							opacity: .85;
+						}
 					}
 					&:nth-child(14) {
 						&:after {
 							content: '08';
+						}
+						button {
+							opacity: .8;
 						}
 					}
 					&:nth-child(15) {
@@ -499,7 +520,7 @@
 							content: '09';
 						}
 						button {
-							opacity: .95;
+							opacity: .75;
 						}
 					}
 					&:nth-child(16) {
@@ -507,7 +528,7 @@
 							content: '10';
 						}
 						button {
-							opacity: .9;
+							opacity: .7;
 						}
 					}
 					&:nth-child(17) {
@@ -515,7 +536,7 @@
 							content: '11';
 						}
 						button {
-							opacity: .85;
+							opacity: .65;
 						}
 					}
 					&:nth-child(18) {
@@ -523,7 +544,7 @@
 							content: '12';
 						}
 						button {
-							opacity: .8;
+							opacity: .6;
 						}
 					}
 					&:nth-child(19) {
@@ -538,7 +559,7 @@
 							text-align: left;
 						}
 						button {
-
+							opacity: .55;
 						}
 					}
 					&:nth-child(19) {
@@ -546,7 +567,7 @@
 							content: 'Q1';
 						}
 						button {
-							opacity: .7;
+							opacity: .5;
 						}
 					}
 					&:nth-child(20) {
@@ -554,7 +575,7 @@
 							content: 'Q2';
 						}
 						button {
-							opacity: .65;
+							opacity: .45;
 						}
 					}
 					&:nth-child(21) {
@@ -562,7 +583,7 @@
 							content: 'Q3';
 						}
 						button {
-							opacity: .6;
+							opacity: .4;
 						}
 					}
 					&:nth-child(22) {
@@ -570,7 +591,7 @@
 							content: 'Q4';
 						}
 						button {
-							opacity: .55;
+							opacity: .35;
 						}
 					}
 					&:nth-child(23) {
@@ -578,7 +599,7 @@
 							content: 'Q5';
 						}
 						button {
-							opacity: .5;
+							opacity: .3;
 						}
 					}
 					&:nth-child(24) {
@@ -586,7 +607,7 @@
 							content: 'Q6';
 						}
 						button {
-							opacity: .45;
+							opacity: .25;
 						}
 					}
 					&:nth-child(25) {
@@ -601,7 +622,7 @@
 							text-align: left;
 						}
 						button {
-
+							opacity: .2;
 						}
 					}
 					&:nth-child(26) {
@@ -609,7 +630,7 @@
 							content: 'Q2';
 						}
 						button {
-							opacity: .35;
+							opacity: .15;
 						}
 					}
 					&:nth-child(27) {
@@ -617,7 +638,7 @@
 							content: 'Q3';
 						}
 						button {
-							opacity: .3;
+							opacity: .1;
 						}
 					}
 					button {
@@ -666,9 +687,9 @@
 	}
 	@media (max-width: 991px) {
 		padding-top: 50px;
-		padding-bottom: 90px;
+		padding-bottom: 120px;
 		.content__title {
-			padding-left: 0;
+			padding-right: 0;
 			margin-bottom: 30px;
 		}
 		&__slider {
@@ -689,15 +710,20 @@
 				padding: 30px 20px 20px;
 			}
 			&_prev, &_next {
-				display: none;
+				// display: none;
+				top: auto;
+				bottom: -50px;
+				width: 40px;
+				height: 40px;
+			}
+			&_prev {
+				// right: auto;
+				// left: 15px;
+				right: 65px;
 			}
 		}
 	}
 }
-
-// [data-slick-index="6"] {
-// 	display: none !important;
-// }
 
 .plan {
 	padding-top: 112px;
@@ -801,69 +827,6 @@
 }
 
 
-// .chart, .chartData {
-//   // border: 1px solid #333;
-// }
-
-// .chart {
-//   display: block;
-//   margin: 0 0 50px 0;
-//   float: left;
-//   cursor: pointer;
-// }
-
-// .chartData {
-//   // width: 200px;
-//   margin: 0 40px 0 0;
-//   float: right;
-//   border-collapse: collapse;
-//   // box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
-//   // -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
-//   // -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
-//   // background-position: 0 -100px;
-// }
-
-// .chartData th, .chartData td {
-//   padding: 0.5em;
-//   // border: 1px dotted #666;
-//   text-align: left;
-// }
-
-// .chartData th {
-//   // border-bottom: 2px solid #333;
-//   text-transform: uppercase;
-// }
-
-// .chartData td {
-//   cursor: pointer;
-//   span {
-//   	color: $main_color;
-//   }
-//   &:first-child {
-//   	position: relative;
-//   	padding-left: 30px;
-//   	&:before {
-//   		content: '';
-//   		display: block;
-//   		left: 0;
-//   		position: absolute;
-//   		border: 8px solid;
-//   		border-radius: 50%;
-//   	}
-//   }
-//   &:last-child {
-//   	display: none;
-//   }
-// }
-
-// .chartData td.highlight {
-// }
-
-// .chartData tr:hover td {
-//   // background: #f0f0f0;
-// }
-
-
 .charts {
 	padding-top: 26px;
 	padding-bottom: 120px;
@@ -873,7 +836,13 @@
 		margin-bottom: 77px;
 	}
 	&__grid {
-
+		margin-left: -50px;
+		@extend %clear_a;
+		>div {
+			padding-left: 50px;
+			float: left;
+			width: 50%;
+		}
 	}
 	&__item {
 		@extend %clear_a;
@@ -991,8 +960,11 @@
 	}
 	&__grid {
 		margin-left: -100px;
+		@extend %clear_a;
 		> div {
 			padding-left: 100px;
+			float: left;
+			width: 50%;
 		}
 	}
 	&__img {
@@ -1038,28 +1010,33 @@
 	&__content {
 		color: #ffffff;
 		max-width: 400px;
-		position: relative;
-		z-index: 1;
+		// position: relative;
+		// z-index: 1;
 	}
 	&__img {
 		position: absolute;
-		right: 46px;
+		left: 472px;
 		top: -143px;
-		max-width: 57%;
+		width: 670px;
 		z-index: 0;
 	}
 	&__title {
 		font-size: 36px;
 		line-height: 60px;
 		margin-bottom: 38px;
+		position: relative;
+		z-index: 2;
 		// max-width: 386px;
 	}
 	&__text {
 		line-height: 20px;
 		margin-bottom: 48px;
+		position: relative;
+		z-index: 2;
 	}
 	&__action {
-
+		position: relative;
+		z-index: 2;
 	}
 	.btn {
 		width: 179px;
@@ -1071,8 +1048,9 @@
 	@media (max-width: 991px) {
 		&__img {
 			position: absolute;
-			right: -7%;
-			top: -32%;
+			// left: 50%;
+			left: 345px;
+			// top: -32%;
 			// max-width: 64%;
 			max-width: none;
 			z-index: 0;
@@ -1081,13 +1059,21 @@
 	@media (max-width: 767px) {
 		padding-top: 50px;
 		padding-bottom: 50px;
+		&__title {
+			margin-bottom: 15px;
+		}
 		&__content {
 			max-width: none;
 			text-align: center;
 		}
 		&__img {
-			display: none;
-			opacity: 0.7;
+			// display: none;
+			// opacity: 0.7;
+			position: static;
+			width: 340px;
+			display: inline-block;
+			margin-bottom: 30px;
+			max-width: none;
 		}
 		.btn {
 			width: 250px;
