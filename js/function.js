@@ -304,6 +304,10 @@ $(document).ready(function() {
         }
     });
 
+    // $('.success__box_code--copy').on('click', function() {
+    //     CopyToClipboard('salecode');
+    // });
+
 });
 
 function checkEmptyField(form) {

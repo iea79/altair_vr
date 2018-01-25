@@ -8,12 +8,13 @@ if (!window.requestAnimationFrame) {
 }
 
 // Init Stats
-var stats = new Stats();
-stats.setMode(0);
-stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
-document.body.appendChild(stats.domElement);
+// var stats = new Stats();
+// stats.setMode(0);
+// // stats.domElement.style.position = 'absolute';
+// // stats.domElement.style.left = '0px';
+// // stats.domElement.style.top = '0px';
+// // stats.domElement.remove;
+// document.body.appendChild(stats.domElement);
 
 
 /*!
@@ -167,9 +168,9 @@ document.body.appendChild(stats.domElement);
             callback();
 
             window.requestAnimationFrame(function () {
-                stats.begin(); // Only for Stats
+                // stats.begin(); // Only for Stats
                 this.loop(callback);
-                stats.end(); // Only for Stats
+                // stats.end(); // Only for Stats
             }.bind(this));
         };
 

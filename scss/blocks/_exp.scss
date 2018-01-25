@@ -1,4 +1,4 @@
-$dot_whith:		3.1%;
+$dot_whith:		3.3%;
 $dot_year: 		5%;
 $dot_single: 	7%;
 .exp {
@@ -267,14 +267,14 @@ $dot_single: 	7%;
 							opacity: .55;
 						}
 					}
-					&:nth-child(19) {
-						&:after {
-							content: 'Q1';
-						}
-						button {
-							opacity: .5;
-						}
-					}
+					// &:nth-child(19) {
+					// 	&:after {
+					// 		content: 'Q1';
+					// 	}
+					// 	button {
+					// 		opacity: .5;
+					// 	}
+					// }
 					&:nth-child(20) {
 						&:after {
 							content: 'Q2';
@@ -299,14 +299,14 @@ $dot_single: 	7%;
 							opacity: .35;
 						}
 					}
-					&:nth-child(23) {
-						&:after {
-							content: 'Q5';
-						}
-						button {
-							opacity: .3;
-						}
-					}
+					// &:nth-child(23) {
+					// 	&:after {
+					// 		content: 'Q5';
+					// 	}
+					// 	button {
+					// 		opacity: .3;
+					// 	}
+					// }
 					// &:nth-child(24) {
 					// 	&:after {
 					// 		content: 'Q6';
@@ -315,7 +315,7 @@ $dot_single: 	7%;
 					// 		opacity: .25;
 					// 	}
 					// }
-					&:nth-child(24) {
+					&:nth-child(23) {
 						width: $dot_single;
 						text-align: right;
 						&:after {
@@ -330,7 +330,7 @@ $dot_single: 	7%;
 							opacity: .2;
 						}
 					}
-					&:nth-child(25) {
+					&:nth-child(24) {
 						&:after {
 							content: 'Q2';
 						}
@@ -338,7 +338,7 @@ $dot_single: 	7%;
 							opacity: .15;
 						}
 					}
-					&:nth-child(26) {
+					&:nth-child(25) {
 						&:after {
 							content: 'Q3';
 						}
