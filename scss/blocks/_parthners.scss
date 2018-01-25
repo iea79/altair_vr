@@ -1,0 +1,45 @@
+.parthners {
+	.content__title {
+		margin-bottom: 80px;
+	}
+	&__grid {
+		margin-left: -60px;
+		align-items: center;
+		> div {
+			padding-left: 60px;
+			margin-bottom: 71px;
+		}
+		img {
+			// -webkit-filter: grayscale(100%);
+			// -moz-filter: grayscale(100%);
+			-ms-filter: grayscale(100%);
+			-o-filter: grayscale(100%);
+			filter: grayscale(100%);
+			filter: gray; /* IE 6-9 */
+			transition: all .3s;
+			&:hover {
+				// -webkit-filter: grayscale(0%);
+				// -moz-filter: grayscale(0%);
+				-ms-filter: grayscale(0%);
+				-o-filter: grayscale(0%);
+				filter: grayscale(0%);
+				filter: none; /* IE 6-9 */
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		&__grid {
+			> div {
+				width: 33.3%;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		&__grid {
+			text-align: center;
+			> div {
+				width: 50%;
+			}
+		}
+	}
+}

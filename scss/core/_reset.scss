@@ -1,6 +1,7 @@
 // My reset browser styles ========================
 * {
   box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 
 html,body,.wrapper {

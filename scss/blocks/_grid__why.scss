@@ -7,7 +7,7 @@
 		position: relative;
 		color: #272727;
 		line-height: 1.5;
-		margin-bottom: 50px;
+		margin-bottom: 70px;
 		// font-size: 14px;
 		&:before {
 			content: '';
@@ -49,6 +49,7 @@
 		}
 	}
 	@media (max-width: 767px) {
+		margin-bottom: 50px;
 		.grid__wrapper {
 			width: 100%;
 			padding-left: 60px;

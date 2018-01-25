@@ -48,8 +48,8 @@
 
 .vr {
 	// background: url('../img/vr_bg.png') no-repeat top 104px right;
-	padding-top: 130px;
-	padding-bottom: 137px;
+	padding-top: 151px;
+	padding-bottom: 151px;
 	position: relative;
 	&:before {
 		content: 'VR';
@@ -105,8 +105,8 @@
 	background-image: linear-gradient(to right, #653e9b 0%, #e555c2 100%);
 	position: relative;
 	color: #fff;
-	padding-top: 103px;
-	padding-bottom: 74px;
+	padding-top: 105px;
+	padding-bottom: 60px;
 	&:before {
 		content: '';
 		position: absolute;
@@ -128,3 +128,59 @@
 		padding-bottom: 50px;
 	}
 }
+
+.line__altair {
+	background: url('../img/altair_bg.jpg') no-repeat top center #fff;
+	background-size: cover;
+	padding-top: 145px;
+	padding-bottom: 80px;
+	position: relative;
+	overflow: hidden;
+	&:before {
+		content: 'ALTAIR';
+		position: absolute;
+		color: #f7f7f7;
+		font-weight: 800;
+		font-size: 295px;
+		display: block;
+		right: -18.7%;
+		top: 457px;
+		transform: rotate(90deg);
+		z-index: 0;
+	}
+	&:after {
+		content: '';
+		width: 1px;
+		top: 0;
+		bottom: 0;
+		left: 49.3%;
+		background-color: #e6e6e6;
+		position: absolute;
+		z-index: 1;
+
+	}
+	.container_center {
+		position: relative;
+		z-index: 3;
+	}
+	.content__title {
+		margin-bottom: 52px;
+	}
+	@media (max-width: 991px) {
+		&:before {
+			right: -51%;
+		}
+	}
+	@media (max-width: 767px) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		&:before {
+			display: none;
+		}
+		&:after {
+			display: none;
+		}
+	}
+}
+
+

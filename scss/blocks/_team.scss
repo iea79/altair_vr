@@ -1,0 +1,160 @@
+.team {
+	padding-top: 121px;
+	padding-bottom: 66px;
+	position: relative;
+	z-index: 5;
+	.content__title {
+		margin-bottom: 64px;
+	}
+	&__grid {
+		margin-left: -23px;
+		margin-bottom: 24px;
+		.grid {
+			&__wrapper {
+				padding-left: 23px;
+				margin-bottom: 33px;
+			}
+			&__item {
+				position: relative;
+				z-index: 1;
+				&:before {
+					content: '';
+					position: absolute;
+					z-index: -1;
+					top: -20px;
+					right: -20px;
+					bottom: -20px;
+					left: -20px;
+					box-shadow: 0 2px 49px rgba(0, 0, 0, 0.09);
+					opacity: 0;
+					transition: all .6s;
+				}
+				&:hover {
+					z-index: 2;
+					&:before {
+						background-color: #fff;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	&__title {
+		font-size: 18px;
+		margin-bottom: 47px;
+		font-weight: 600;
+	}
+	img {
+		display: block;
+		margin-bottom: 16px;
+		width: 100%;
+	}
+	&__name {
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.7px;
+		margin-bottom: 8px;
+		line-height: 1.3;
+	}
+	&__position {
+		color: #4d4d4d;
+		font-size: 12px;
+		line-height: 1.3;
+	}
+	&__descr {
+		line-height: 1.3;
+		overflow: hidden;
+		height: 0;
+		transition: all .3s;
+		&.open {
+			padding-top: 26px;
+			padding-bottom: 10px;
+			height: auto;
+		}
+	}
+	&__more {
+		font-size: 12px;
+		color: #c745a6;
+		margin-top: 13px;
+		cursor: pointer;
+		&:after {
+			content: url('../img/angel-xs.svg');
+			display: inline-block;
+			vertical-align: text-top;
+			margin-left: 3px;
+		}
+		&.open {
+			.team__more {
+				&_hide {
+					display: none;
+				}
+				&_show {
+					display: inline-block;
+				}
+			}
+		}
+		&_hide {
+			display: inline-block;
+		}
+		&_show {
+			display: none;
+		}
+	}
+	&__soc {
+		margin-top: 20px;
+		@extend %clear_a;
+		&_item {
+			display: inline-block;
+			float: left;
+			border: 1px solid #f7f7f7;
+			background-color: #f7f7f7;
+			color: #4d4d4d;
+			font-size: 11px;
+			padding: 8px;
+			margin-right: 12px;
+			text-decoration: none;
+			transition: all .3s;
+			&:hover {
+				border: 1px solid #4d4d4d;
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		&__grid {
+			.grid {
+				&__wrapper {
+					width: 25%;
+				}
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		&__grid {
+			.grid {
+				&__wrapper {
+					width: 33.3%;
+				}
+			}
+		}
+	}
+	@media (max-width: 600px) {
+		&__grid {
+			.grid {
+				&__wrapper {
+					width: 50%;
+				}
+			}
+		}
+	}
+	@media (max-width: 400px) {
+		&__grid {
+			.grid {
+				&__wrapper {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,93 @@
+.contact {
+	margin-bottom: 180px;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 76px 8.4%;
+	&__container {
+		position: relative;
+	}
+	&__title {
+		font-size: 36px;
+		margin-bottom: 30px;
+	}
+	&__sub {
+		font-size: 14px;
+		margin-bottom: 26px;
+	}
+	&__form {
+		margin-left: -49px;
+		@extend %clear_a;
+	}
+	&__item {
+		float: left;
+		width: 100%;
+		max-width: 30%;
+		padding-left: 49px;
+		position: relative;
+		&:last-child {
+			max-width: 37%;
+		}
+		&_field {
+			width: 100%;
+			&.invalid {
+				border-bottom-color: red;
+			}
+		}
+		&_label {
+			position: absolute;
+			top: 13px;
+			left: 74px;
+			transition: all .3s;
+		}
+		&.focused {
+			.contact__item_label {
+				top: -6px;
+				left: 49px;
+				font-size: 10px;
+			}
+		}
+	}
+	&__confirm {
+		margin-top: 32px;
+		font-size: 12px;
+		position: relative;
+		label {
+			display: inline-block;
+			padding-left: 30px;
+		}
+		input[type=checkbox] {
+			position: absolute;
+			top: 1px;
+			vertical-align: middle;
+			display: inline-block;
+			&.invalid {
+				border-color: red;
+			}
+		}
+		a {
+			color: #fff;
+		}
+	}
+	.btn {
+		width: 100%;
+		max-width: 255px;
+	}
+	@media (max-width: 767px) {
+		padding: 50px 25px 25px;
+		margin-bottom: 80px;
+		&__title {
+			font-size: 30px;
+		}
+		&__item {
+			max-width: none !important;
+			float: none;
+			margin-bottom: 25px;
+		}
+		.btn {
+			max-width: none;
+		}
+		&__confirm {
+			margin-top: 18px;
+		}
+	}
+}

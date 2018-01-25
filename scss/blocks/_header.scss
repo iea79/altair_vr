@@ -1,5 +1,5 @@
 .header {
-	padding: 28px 0;
+	padding: 38px 0;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -8,26 +8,58 @@
 	@extend %clear_a;
 	&__logo {
 		float: left;
-		width: 91px;
-		margin-right: 9%;
+		width: 70px;
+		margin-right: 6.5%;
 		display: block;
+		position: relative;
+		z-index: 10;
 		img {
 			height: auto;
 			width: 100%;
+		}
+	}
+	&__action {
+		overflow: hidden;
+		float: right;
+		margin-right: 7%;
+		// width: auto !important;
+		display: inline-block;
+		position: relative;
+		z-index: 10;
+		transition: all 0.5s;
+		.btn {
+			font-weight: 400;
+			padding-top: 10px;
+			margin-top: 3px;
+			padding-bottom: 10px;
+		}
+		&.hide {
+			margin-right: 0;
+			width: 0 !important;
+		}
+	}
+	@media (max-width: 991px) {
+		&__logo {
+			// margin-right: 20px;
+			img {
+			}
 		}
 	}
 	@media (max-width: 767px) {
 		padding: 15px 0;
 		&__logo {
 			// margin-top: 9px;
-			width: 100%;
-			margin-right: 30px;
+			margin: auto;
 			float: none;
 			text-align: center;
+			z-index: 0;
 			img {
 				display: inline-block;
 				width: 45px;
 			}
+		}
+		&__action {
+			display: none;
 		}
 	}
 }

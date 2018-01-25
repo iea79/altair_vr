@@ -10,21 +10,26 @@ input[type=number],
 input[type=datetime], 
 textarea {
 	background-color: $input_bg_color;
-	border: 1px solid $input_border_color;
-	padding: 6px 15px;
+	border: none;
+	border-bottom: 1px solid $input_border_color;
+	padding: 13px 26px;
 	outline: none;
-	font-size: 16px;
+	font-size: 13px;
 	font-weight: 300;
 	font-family: $main_font_family;
-	border-radius: 5px;
+	border-radius: 0;
+	color: #fff;
+	// text-indent: 0px;
 	@include trs(0.3s);
 	&:hover {
 	}
 	&:focus {
-		border: 1px solid #bebebe;
-		background-color: #f6f6f6;
+		// border: 1px solid #bebebe;
+		background-color: $input_focus_bg_color;
+		// text-indent: -99px;
 		@include placeholder {
-			color: red;
+			color: $input_focus_placeholder_color;
+			opacity: 0;
 		}
 	}
 	&.input_error {
@@ -61,9 +66,9 @@ input[type=radio]:not(:disabled) {
 input[type=checkbox],
 input[type=radio] {
     display: inline-block;
-    height: 14px;
-    width: 14px;
-    border: 1px solid #aaa;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #fff;
     overflow: hidden;
     margin-top: -4px;
     vertical-align: middle;
@@ -81,6 +86,7 @@ input[type=radio] {
 input[type=checkbox]:before,
 input[type=radio]:before {
     display: block;
+    border-radius: 	0;
 }
 
 input[type=radio]:checked:before {
@@ -94,17 +100,17 @@ input[type=radio]:checked:before {
     display: block;
     position: absolute;
     border-radius: 50%;
-    background: #000;
+    background: #fff;
 }
 
 input[type=checkbox]:checked:before,
 input[type=checkbox]:indeterminate:before {
-    content: "\2714";
-    font-size: 12px;
+    content: url(../img/checkbox.svg);
+    // font-size: 12px;
     -webkit-font-smoothing: antialiased;
     text-align: center;
-    line-height: 13px;
-    color: #000;
+    line-height: 15px;
+    color: #fff;
 }
 
 input[type=checkbox]:indeterminate:before {

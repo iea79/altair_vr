@@ -5,7 +5,7 @@ $main_color:									#272727;
 $main_line_height:								1.2;
 $main_font_size:								14px;
 
-$container_width:								1200px;
+$container_width:								1172px;
 
 $footer_height: 								auto;
 
@@ -40,20 +40,20 @@ $grid_padding:									20px;
 // Input variables
 
 // Input color
-$input_color:									$main_color;
-$input_bg_color:								#fff;
-$input_border_color:							#ddd;
-$input_placeholder_color:						#ddd;
+$input_color:									#fff;
+$input_bg_color:								transparent;
+$input_border_color:							#fff;
+$input_placeholder_color:						#fff;
 
 // Input hover color
 $input_hover_color:								#fff;
-$input_hover_bg_color:							#fff;
-$input_hover_border_color:						#ddd;
-$input_hover_placeholder_color:					#ddd;
+$input_hover_bg_color:							transparent;
+$input_hover_border_color:						#fff;
+$input_hover_placeholder_color:					#fff;
 
 // Input focus color
 $input_focus_color:								#fff;
-$input_focus_bg_color:							#fff;
+$input_focus_bg_color:							transparent;
 $input_focus_border_color:						#ddd;
 $input_focus_placeholder_color:					#ddd;
 
@@ -65,7 +65,7 @@ $input_disabled_placeholder_color:				#fff;
 
 // Input error color
 $input_error_color:								red;
-$input_error_bg_color:							#fff;
+$input_error_bg_color:							transparent;
 $input_error_border_color:						red;
 $input_error_placeholder_color:					red;
 

@@ -10,24 +10,33 @@
     left: 0;
     z-index: 1050;
     -webkit-overflow-scrolling: touch;
+    text-align: center;
     outline: 0;
+    &:before {
+        content: '';
+        height: 100vh;
+        width: 1px;
+        display: inline-block;
+        vertical-align: middle;
+    }
     &-open {
         overflow: hidden;
     }
     &-close {
         position: absolute;
-        width: 21px;
-        height: 21px;
-        right: 23px;
+        width: 15px;
+        height: 15px;
+        right: 21px;
         top: 23px;
         // background: image-url('close.svg') no-repeat center center;
         &:before,&:after {
             content: '';
             position: absolute;
             display: block;
-            width: 20px;
+            width: 19px;
             border-top: 1px solid $main_color;
-            top: 10px;
+            top: 7px;
+            left: -2px;
         }
         &:before {
             transform: rotate(45deg);
@@ -49,21 +58,22 @@
     }
     &-dialog {
         position: relative;
-        width: auto;
-        margin: 10px auto;
-        max-width: 690px;
+        width: 670px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 15px auto;
+        max-width: 90%;
+        text-align: left;
     }
 
     &-content {
         position: relative;
         background-color: #fff;
-        border: 1px solid #999;
-        border: 1px solid rgba(0,0,0,.2);
-        border-radius: 6px;
-        box-shadow: 0 3px 9px rgba(0,0,0,.5);
+        border-radius: 0;
+        box-shadow: 0 36px 68px rgba(0, 0, 0, 0.32);
         background-clip: padding-box;
         outline: 0;
-        padding: 46px 53px;
+        padding: 43px 58px;
     }
 
     &-backdrop {
@@ -73,23 +83,23 @@
         bottom: 0;
         left: 0;
         z-index: 1040;
-        background-color: #000;
+        background-color: #1b202c;
         &.fade {
             opacity: 0;
             filter: alpha(opacity=0);
         }
 
         &.in {
-            opacity: .5;
+            opacity: .8;
             filter: alpha(opacity=50);
         }
     }
 
     &-header {
-        padding: 15px 0;
+        padding: 0 0 18px;
         min-height: 16.42857143px;
-        color: #666;
-        font-size: 18px;
+        color: #1d223b;
+        font-size: 24px;
         .close {
             margin-top: -2px;
         }
@@ -121,6 +131,17 @@
 
         .btn-block+.btn-block {
             margin-left: 0;
+        }
+    }
+    @media (max-width: 767px) {
+        &:before {
+            display: none;
+        }
+        &-dialog {
+            max-width: 100%;
+        }
+        &-content {
+            padding: 40px 25px 15px;
         }
     }
 

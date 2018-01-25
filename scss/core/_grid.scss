@@ -18,7 +18,7 @@
 	box-sizing: content-box;
 	@include flex();
 	@include flex-flow(row wrap);
-	@extend %clear_all;
+	// @extend %clear_all;
 	&-nowrap {
 		@include flex-flow(row nowrap);
 	}
@@ -39,7 +39,7 @@
 				width: 25%;
 			}
 			&_5 {
-				width: 20%;
+				width: 19.9%;
 			}
 			&_2_3 {
 				width: 66%;
@@ -78,6 +78,11 @@
 	&__5 {
 		>div {		
 			width: 20%;
+		}
+	}
+	&__6 {
+		>div {		
+			width: 16.6%;
 		}
 	}
 }

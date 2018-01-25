@@ -1,5 +1,8 @@
 $font-path: "../fonts" !default;
 
+$ico-steemit: "\e905";
+$ico-medium: "\e906";
+$ico-golos: "\e907";
 $ico-bitcoin: "\e900";
 $ico-fb: "\e901";
 $ico-telegram: "\e902";
@@ -32,6 +35,21 @@ $ico-youtube: "\e904";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ico-steemit {
+  &:before {
+    content: $ico-steemit;
+  }
+}
+.ico-medium {
+  &:before {
+    content: $ico-medium;
+  }
+}
+.ico-golos {
+  &:before {
+    content: $ico-golos;
+  }
+}
 .ico-bitcoin {
   &:before {
     content: $ico-bitcoin;

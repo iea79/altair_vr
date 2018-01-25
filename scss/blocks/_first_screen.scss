@@ -1,10 +1,10 @@
 .first__screen {
 	overflow: hidden;
 	background-color: #010e15;
-	padding-top: 237px;
-	padding-bottom: 165px;
+	padding-top: 198px;
+	padding-bottom: 330px;
 	margin-top: -1px;
-	z-index: 5;
+	z-index: 8;
 	position: relative;
 	.container_center {
 		position: relative;
@@ -41,11 +41,11 @@
 	}
 	&_title {
 		font-weight: 800;
-		font-size: 36px;
-		line-height: 1.7;
+		font-size: 48px;
+		line-height: 1.5;
 		text-transform: uppercase;
 		letter-spacing: 0.06em;
-		margin-bottom: 31px;
+		margin-bottom: 48px;
 	}
 	&_sub {
 		font-size: 18px;
@@ -54,7 +54,8 @@
 		min-width: 150px;
 	}
 	&_action {
-		margin-bottom: 83px;
+		margin-bottom: 113px;
+		margin-left: -22px;
 	}
 	&_play {
 		display: inline-block;
@@ -82,10 +83,10 @@
 		a {
 			display: inline-block;
 			vertical-align: middle;
-			margin-right: 31px;
+			margin-right: 29px;
 			color: #fff;
 			text-decoration: none;
-			font-size: 17px;
+			font-size: 18px;
 			transition: color .3s;
 			&:hover {
 				color: #d552be;
@@ -93,8 +94,8 @@
 		}
 	}
 	.btn {
-		width: 37%;
-		margin-right: 7%;
+		// width: 37%;
+		// margin-right: 7%;
 	}
 	@media (max-width: 1199px) {
 		padding-top: 150px;

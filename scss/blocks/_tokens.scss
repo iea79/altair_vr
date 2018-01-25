@@ -1,0 +1,50 @@
+.tokens {
+	background-color: #fafafa;
+	padding-top: 88px;
+	padding-bottom: 114px;
+	.container_center {}
+	.content__title {
+		margin-bottom: 72px;
+	}
+	&__grid {
+		margin-left: -100px;
+		@extend %clear_a;
+		> div {
+			padding-left: 100px;
+			float: left;
+			width: 50%;
+		}
+	}
+	&__img {
+		margin-bottom: 28px;
+	}
+	&__name {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+	&__text {
+		line-height: 24px;
+		p {
+			margin-bottom: 25px;
+		}
+	}
+	@media (max-width: 991px) {
+		&__grid {
+			margin-left: -50px;
+			> div {
+				padding-left: 50px;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		&__grid {
+			> div {
+				width: 100%;
+				text-align: center;
+				margin-bottom: 50px;
+			}
+		}
+	}
+}
