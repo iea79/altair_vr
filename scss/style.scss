@@ -110,6 +110,31 @@
 			line-height: 1.6;
 		}
 	}
+
+	@media (max-width: 767px) {
+		&__modal {
+			.modal {
+				&-dialog {
+				}
+				&-content {
+					padding-left: 30px;
+					padding-right: 30px;
+				}
+				&-header {
+				}
+				&-footer {
+					padding: 24px 0 24px 0;
+					text-align: left;
+					.btn {
+					}
+				}
+			}
+			p {
+				margin: 0;
+				line-height: 1.6;
+			}
+		}
+	}
 }
 
 .success__box {

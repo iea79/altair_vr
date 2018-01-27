@@ -58,7 +58,7 @@
     }
     &-dialog {
         position: relative;
-        width: 670px;
+        max-width: 670px;
         display: inline-block;
         vertical-align: middle;
         margin: 15px auto;
