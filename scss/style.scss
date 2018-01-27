@@ -82,6 +82,34 @@
 	    	margin-bottom: 30px;
 	    }
 	}
+	&__modal {
+		font-size: 14px;
+		.modal {
+			&-dialog {
+				max-width: 540px;
+			}
+			&-content {
+				padding-left: 70px;
+				padding-right: 70px;
+			}
+			&-header {
+				margin-bottom: 0px;
+			}
+			&-footer {
+				border-top: none;
+				padding: 24px 0 0 0;
+				text-align: left;
+				.btn {
+					margin-left: 0;
+					width: 154px;
+				}
+			}
+		}
+		p {
+			margin: 0;
+			line-height: 1.6;
+		}
+	}
 }
 
 .success__box {

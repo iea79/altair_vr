@@ -295,6 +295,11 @@ $(document).ready(function() {
     $('.contact__form,.presale__form').submit(function() {
         if (checkEmptyField($(this)) == 'invalid') {
             return false;
+        } else {
+            // показываем попап после успешной подписки на новости
+            // if ($(this).hasClass('contact__form')) {
+            //     $('#success__modal').modal('show');
+            // }
         }
     });
 
