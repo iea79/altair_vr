@@ -269,7 +269,7 @@ $(document).ready(function() {
 
         // animStart('.slide__left', 'slideInLeft');
         // animStart('.slide__right', 'slideInRight');
-        // animStart('.slide__top', 'fadeInUp');
+        animStart('.sale__top', 'fadeInUp');
 
         fixGridHeight();
 
@@ -360,21 +360,21 @@ function checkOnResize() {
 //    	});
 // }
 
-// function animStart(el, anim) {
-//     var windowHeight = $(window).height();
+function animStart(el, anim) {
+    var windowHeight = $(window).height();
 
-//     $(el).addClass('hidden');
+    $(el).addClass('hidden');
  
-//     $(document).on('scroll', function() {
-//         $(el).each(function() {
-//             var self = $(this),
-//             height = self.offset().top + self.height();
-//             if ($(document).scrollTop() + windowHeight >= height) {
-//                 self.addClass('visible animated '+anim)
-//             }
-//         });
-//     });
-// }
+    $(document).on('scroll', function() {
+        $(el).each(function() {
+            var self = $(this),
+            height = self.offset().top + self.height();
+            if ($(document).scrollTop() + windowHeight >= height) {
+                self.addClass('visible animated '+anim)
+            }
+        });
+    });
+}
 
 function fixGridHeight() {
     var el = $('[data-fix-height] .grid__wrapper');

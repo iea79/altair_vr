@@ -21,6 +21,11 @@
 			@include trs(.3);
 		}
 	}
+	img {
+		display: inline-block;
+		vertical-align: middle;
+		width: 20px;
+	}
 	&__list {
 		height: 0;
 		position: absolute;

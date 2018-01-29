@@ -31,9 +31,9 @@
 	&_book {
 		padding-left: 29px;
 		position: absolute;
-		right: 0;
+		right: 9%;
 		bottom: -21px;
-		width: 58%;
+		width: 40%;
 		img {
 			height: auto;
 			display: inline-block;
@@ -89,6 +89,7 @@
 			text-decoration: none;
 			font-size: 18px;
 			transition: color .3s;
+			margin-bottom: 20px;
 			&:hover {
 				color: #d552be;
 			}
@@ -100,17 +101,18 @@
 	}
 	@media (max-width: 1199px) {
 		padding-top: 150px;
-		padding-bottom: 90px;
+		padding-bottom: 220px;
 		&_content {
 			width: 100%;
 			max-width: 500px;
 		}
 		&_book {
 			position: absolute;
-			bottom: 30px;
-			right: 8px;
-			width: 100%;
-			max-width: 650px;
+			// bottom: 30px;
+			// right: 8px;
+			// width: 100%;
+			// max-width: 650px;
+			width: 35%;
 		}
 	}
 	@media (max-width: 991px) {
@@ -119,6 +121,7 @@
 			position: static;
 			margin: 0 0 28px;
 			padding: 0;
+			width: 100%;
 			img {
 				width: 100%;
 				margin: 0;
