@@ -25,23 +25,29 @@
 		display: inline-block;
 		vertical-align: middle;
 		width: 20px;
+		max-width: none;
 	}
 	&__list {
-		height: 0;
+		// height: 0;
 		position: absolute;
 		left: -3px;
 		top: 13px;
 		list-style: none;
 		padding: 0;
-		transform: translate(0, -15%);
-		@include trs(.3);
-		overflow: hidden;
+		// transform: translate(0, -15%);
+		// @include trs(.3);
+		// overflow: hidden;
 		&_item {
+			text-align: left;
+			display: none;
+			&.animated {
+				animation-duration: 0.3s;
+			}
 			a {
 				color: transparentize(#fff, .5);
 				display: block;
 				text-decoration: none;
-				padding: 0px 17px;
+				padding: 2px 8px;
 				@include trs(.3);
 				&:hover {
 					color: #fff;
@@ -65,13 +71,14 @@
 				}
 			}
 			&__list {
-				border: 1px solid transparentize(#fff, .5);
+				// border: 1px solid transparentize(#fff, .5);
 				height: auto;
 				display: block;
 				transform: translate(0, 0%);
 				&_item {
+					// display: block;
 					a {
-						padding: 4px 17px;
+						// padding: 4px 7px;
 					}
 				}
 			}

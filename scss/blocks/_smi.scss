@@ -6,6 +6,14 @@
 	}
 	&__slider {
 		&_item {
+			// margin-left: -31px;
+			padding-left: 31px;
+			> div {
+			}
+		}
+		.slick-list {
+			margin-left: -31px;
+			padding-right: 1px;
 		}
 		&_prev,&_next {
 			display: block;

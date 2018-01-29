@@ -1,8 +1,9 @@
 $font-path: "../fonts" !default;
 
-$ico-steemit: "\e905";
-$ico-medium: "\e906";
-$ico-golos: "\e907";
+$ico-medium: "\e905";
+$ico-golos: "\e906";
+$ico-reddit: "\e907";
+$ico-steemit: "\e908";
 $ico-bitcoin: "\e900";
 $ico-fb: "\e901";
 $ico-telegram: "\e902";
@@ -35,11 +36,6 @@ $ico-youtube: "\e904";
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ico-steemit {
-  &:before {
-    content: $ico-steemit;
-  }
-}
 .ico-medium {
   &:before {
     content: $ico-medium;
@@ -48,6 +44,16 @@ $ico-youtube: "\e904";
 .ico-golos {
   &:before {
     content: $ico-golos;
+  }
+}
+.ico-reddit {
+  &:before {
+    content: $ico-reddit;
+  }
+}
+.ico-steemit {
+  &:before {
+    content: $ico-steemit;
   }
 }
 .ico-bitcoin {

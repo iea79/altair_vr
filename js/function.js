@@ -50,7 +50,41 @@ $(document).ready(function() {
 
     $('.language__current').on('click', function() {
         $(this).parent().toggleClass('open');
+        animLangItem();
     });
+
+    function animLangItem() {
+        var language = $('.language');
+        var languageItem = $('.language__list_item');
+        var time = 100;
+
+        if (language.hasClass('open')) {
+
+            $('.language__list_item').each(function() {
+                var self = $(this);
+                setTimeout(function() {
+                    self.addClass('show animated fadeInRight');
+                }, time);
+                time +=100
+            });
+        } else {
+            $('.language__list_item').each(function() {
+                $(this).removeClass('show animated fadeInRight');
+            }); 
+        }
+    }
+
+    setTimeout(function() {
+        $('.first__screen_book').addClass('show');
+    }, 1000);
+
+    setTimeout(function() {
+        $('.first__screen_book-top').addClass('show');
+    }, 2000);
+
+    setTimeout(function() {
+        $('.first__screen_book .globe').addClass('bounce');
+    }, 3000);
 
 	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
 	$('.menu__list a[href^="#"]').click( function(){ 
@@ -187,10 +221,14 @@ $(document).ready(function() {
         adaptiveHeight: true,
         // autoplay: true,
         // autoplaySpeed: 5000,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         responsive: [
             {
             breakpoint: 767,
             settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                     autoplay: false,
                 }
             }
