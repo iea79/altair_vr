@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 470.08 177"
+   version="1.1"
+   id="svg24"
+   sodipodi:docname="iidf.svg"
+   width="470.07999"
+   height="177"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <metadata
+     id="metadata28">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>iidf</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1516"
+     inkscape:window-height="785"
+     id="namedview26"
+     showgrid="false"
+     inkscape:zoom="1.262239"
+     inkscape:cx="169.53999"
+     inkscape:cy="88.5"
+     inkscape:window-x="0"
+     inkscape:window-y="22"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg24" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1{fill:#009ee2;}</style>
+  </defs>
+  <title
+     id="title6">iidf</title>
+  <g
+     id="Слой_2"
+     data-name="Слой 2"
+     transform="translate(64)">
+    <g
+       id="Слой_1-2"
+       data-name="Слой 1">
+      <g
+         id="Слой_2-2"
+         data-name="Слой 2">
+        <g
+           id="Layer_1"
+           data-name="Layer 1">
+          <path
+             class="cls-1"
+             d="M 235,1 C 224.7,1 220,6.3 220,16.8 V 53.49 C 207,47.71 180.81,42.62 162.35,42.62 132.35,42.62 112,63.81 112,95.5 V 125 c 0,31.14 18.26,51.94 49.39,51.94 31.13,0 58.2,-10.79 58.2,-10.79 0,0 5.74,10.85 15.11,10.85 9.37,0 15.3,-4.54 15.3,-15.14 V 16.41 C 250,6.09 245.31,1 235,1 Z M 220,141.9 H 158.76 C 148.24,141.9 138,135.42 138,125.47 V 94.94 c 0,-10.61 10.24,-22 20.76,-22 H 220 Z"
+             id="path8"
+             inkscape:connector-curvature="0"
+             style="fill:#009ee2" />
+          <path
+             class="cls-1"
+             d="m 311.22,32.58 c 1.25,-0.06 10.6,-0.73 12.15,-0.78 0,0 14.77,0.46 15.71,-15.95 0,0 0.47,-13.18 -16.67,-14.07 -1.49,-0.12 -11,-0.19 -12.39,-0.2 -39.33,-0.67 -37,33 -37,33 v 126.59 c 0,11.09 6.24,15.11 15.23,15.11 0,0 14.36,0.58 15.23,-15.66 V 81.07 l 19.88,0.19 c 0,0 14.76,0.43 15.71,-14.78 0,0 0.47,-12.2 -16.66,-13 H 303.47 V 46.8 c 0,0 -3.06,-13.67 7.75,-14.22 z"
+             id="path10"
+             inkscape:connector-curvature="0"
+             style="fill:#009ee2" />
+          <path
+             class="cls-1"
+             d="m 86,19.42 c 0,7.66 -7.28,13.87 -15,13.87 v 0 c -7.71,0 -15,-6.21 -15,-13.87 V 13.87 C 56,6.21 63.29,0 71,0 v 0 c 7.72,0 15,6.21 15,13.87 z"
+             id="path12"
+             inkscape:connector-curvature="0"
+             style="fill:#009ee2" />
+          <path
+             class="cls-1"
+             d="M 86,80.91 V 57.86 C 86,47.54 81.41,42.42 71,42.42 c -10.41,0 -15,5.12 -15,15.44 v 90.75 0 12.92 c 0,10.31 4.59,15.47 15,15.47 10.41,0 15,-5.12 15,-15.44 z"
+             id="path14"
+             inkscape:connector-curvature="0"
+             style="fill:#009ee2" />
+          <path
+             class="cls-1"
+             d="M 30,57.86 C 30,47.54 25.41,42.42 15,42.42 4.59,42.42 0,47.54 0,57.86 v 92.87 0 10.8 C 0,171.84 4.59,177 15,177 c 10.41,0 15,-5.12 15,-15.44 v -82 0 z"
+             id="path16"
+             inkscape:connector-curvature="0"
+             style="fill:#009ee2" />
+          <path
+             class="cls-1"
+             d="m 30,19.42 c 0,7.66 -7.69,13.87 -15,13.87 v 0 C 7.68,33.29 0,27.08 0,19.42 V 13.87 C 0,6.21 7.68,0 15,0 v 0 c 7.31,0 15,6.21 15,13.87 z"
+             id="path18"
+             inkscape:connector-curvature="0"
+             style="fill:#009ee2" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
