@@ -205,10 +205,6 @@
 				bottom: 0;
 				right: -11px;
 			}
-			// img {
-			// 	width: 100%;
-			// 	margin: 0;
-			// }
 		}
 	}
 	@media (max-width: 767px) {
@@ -237,6 +233,45 @@
 		.btn {
 			width: 250px;
 			margin-right: 0;
+		}
+		&_book {
+			// transition: none;
+			bottom: -21px;
+			&-top {
+				width: 200px;
+				left: 50%;
+				margin-left: -100px;
+				bottom: 2%;
+				height: 327px;
+				.light {
+					width: 0;
+					transition: all 1s;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					margin-left: 0;
+				}
+				&.show {
+					.globe {
+						transition: none;
+						position: absolute;
+						top: 0;
+						&.bounce {
+							animation-name: none;
+						}
+					}
+					.light {
+						width: 200px;
+						left: 50%;
+						margin-left: -90px;
+					}
+				}
+			}
+			&-bottom {
+				position: absolute;
+				bottom: 0;
+				right: -11px;
+			}
 		}
 	}
 }

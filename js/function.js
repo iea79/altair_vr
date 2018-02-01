@@ -74,17 +74,24 @@ $(document).ready(function() {
         }
     }
 
-    setTimeout(function() {
-        $('.first__screen_book').addClass('show');
-    }, 1000);
+    if (!isXsWidth()) {
+        setTimeout(function() {
+            $('.first__screen_book').addClass('show');
+        }, 1000);
 
-    setTimeout(function() {
-        $('.first__screen_book-top').addClass('show');
-    }, 2000);
+        setTimeout(function() {
+            $('.first__screen_book-top').addClass('show');
+        }, 2000);
 
-    setTimeout(function() {
-        $('.first__screen_book .globe').addClass('bounce');
-    }, 3000);
+        setTimeout(function() {
+            $('.first__screen_book .globe').addClass('bounce');
+        }, 3000);
+    } else {
+        setTimeout(function() {
+            $('.first__screen_book').addClass('show');
+            $('.first__screen_book-top').addClass('show');
+        }, 1000);
+    }
 
 	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
 	$('.menu__list a[href^="#"]').click( function(){ 
